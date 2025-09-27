@@ -26,9 +26,9 @@ x1, y1, x2, y2 = 500, 200, 700, 700
 memory = load_memory_blocks()
 y_pos = 200
 for block in memory:
-    canvas.create_rectangle(500, y_pos, 650, y_pos+30, fill="red")
+    canvas.create_rectangle(500, y_pos, 650, y_pos+30, fill="yellow")
     canvas.create_text(700, y_pos+15, text=str(block))
-    y_pos += 35
+    y_pos += 30
 
 
 # Draw the 3 sides (left, right, bottom) to make an open-top rectangle
@@ -56,6 +56,5 @@ for job_id, job_time, size in jobs:
     canvas.create_text(125, y_pos+12, text=f"Job {job_id} ({size})")
     y_pos += 35  # space between jobs
     # count += 1
-
 
 GUI.mainloop()
